@@ -4,20 +4,28 @@ html{
 
 body{
     display: grid;
-    grid-template-columns: 20% 1fr;
+    grid-template-columns: 200px 20px 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
-        "navbar header"
-        "navbar portfolio"
-        "navbar skills"
-        "navbar education"
-        "navbar work"
-        "footer footer";
+        "navbar empty header"
+        "navbar empty portfolio"
+        "navbar empty skills"
+        "navbar empty education"
+        "navbar empty work"
+        "footer footer footer";
 }
 
 nav{
     grid-area: navbar;
     background-color:rgba(255,255,255, 0.300);
+}
+nav ul{
+    position: fixed;
+    top:200px;
+}
+#empty{
+    grid-area: empty;
+    background-color: transparent;
 }
 /*header section*/
 header{
@@ -62,14 +70,73 @@ header{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(7, 1fr);
-        grid-area: 
+        grid-template-areas:
+            "title title title"
             "html5 . ."
             "css3 bootstrap scss"
-            "JS React React_native"
-            "Nodejs ExpressJs ."
-            "Python Django Flask"
-            "PHP Symphony ."
-            "SQL MangoDB .";
+            "js react react_native"
+            "nodejs expressJs ."
+            "python django flask"
+            "sql mongoDB .";
+    }
+    #hardskills img{
+        width: 100px;
+    }
+        #hs_title{
+            grid-area: title;
+        }
+        #html5{
+            grid-area: html5;
+        }
+        #css3{
+            grid-area: css3;
+        }
+            #css3 img{
+                width: 50px;
+            }
+        #bootstrap{
+            grid-area: bootstrap;
+        }
+        #scss{
+            grid-area: scss;
+        }
+        #js{
+            grid-area: js;
+        }
+        #react{
+            grid-area: react;
+        }
+        #react_n{
+            grid-area: react_native;
+        }
+        #node{
+            grid-area: nodejs;
+        }
+        #express{
+            grid-area: expressJs;
+        }
+        #python{
+            grid-area: python;
+        }
+        #django{
+            grid-area: django;
+        }
+        #flask{
+            grid-area: flask;
+        }
+        #sql{
+            grid-area: sql;
+        }
+            #sql img{
+                width: 50px;
+            }
+        #mongodb{
+            grid-area: mongoDB;
+        }
+    .pl_icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     #softskills{
         grid-area: softskills;
