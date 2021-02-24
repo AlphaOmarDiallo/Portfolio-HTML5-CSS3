@@ -1,0 +1,86 @@
+html{
+    background-color: #175676;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "navbar header"
+        "navbar portfolio"
+        "navbar skills"
+        "navbar education"
+        "navbar work"
+        "footer footer";
+}
+
+nav{
+    grid-area: navbar;
+    background-color:rgba(255,255,255, 0.300);
+}
+/*header section*/
+header{
+    grid-area: header;
+    background-color: white;
+    display: flex;
+    flex-flow: row nowrap;
+}
+    #logo{
+        display:flex;
+        justify-content:center;
+        align-items: center;
+        background-color: white;
+    }
+    #logo img{
+        width: 300px;
+    }
+    #short_description{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content:center;
+        align-items: center;
+        background-color:#21A179;
+    }
+/*portfolio section*/
+#portfolio{
+    grid-area: portfolio;
+    background-color: pink;
+    display: grid;
+}
+/*skills*/
+#skills{
+    grid-area: skills;
+    background-color: yellow;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "hardskills softskills";
+}
+    #hardskills{
+        grid-area: hardskills;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        grid-area: 
+            "html5 . ."
+            "css3 bootstrap scss"
+            "JS React React_native"
+            "Nodejs ExpressJs ."
+            "Python Django Flask"
+            "PHP Symphony ."
+            "SQL MangoDB .";
+    }
+    #softskills{
+        grid-area: softskills;
+    }
+
+#education{
+    grid-area: education;
+    background-color: green;
+}
+
+#work_experience{
+    grid-area: work;
+    background-color: red;
+}
