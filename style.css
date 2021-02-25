@@ -92,7 +92,7 @@ header{
             grid-area: css3;
         }
             #css3 img{
-                width: 50px;
+                width: 40px;
             }
         #bootstrap{
             grid-area: bootstrap;
@@ -109,6 +109,9 @@ header{
         #react_n{
             grid-area: react_native;
         }
+            #react_n img{
+                width: 80px;
+            }
         #node{
             grid-area: nodejs;
         }
@@ -128,19 +131,50 @@ header{
             grid-area: sql;
         }
             #sql img{
-                width: 50px;
+                width: 40px;
             }
         #mongodb{
             grid-area: mongoDB;
         }
-    .pl_icon{
+    .pl_icon, .sk_icon{
         display: flex;
         align-items: center;
         justify-content: center;
     }
     #softskills{
         grid-area: softskills;
+        display: grid;
+        grid-template-columns: 40% 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas: 
+            "title title"
+            "com_l com_b"
+            "psl psb"
+            "agilel agileb"
+            "twl twb"
+            "wel web";
     }
+    #softskills img{
+        width: 70px;
+    }
+        #sk_title{
+            grid-area: title;
+        }
+        #communication{
+            grid-area: com_l;
+        }
+        #problem_solving{
+            grid-area: psl;
+        }
+        #agile{
+            grid-area: agilel;
+        }
+        #teamwork{
+            grid-area:twl;
+        }
+        #work_ethic{
+            grid-area: wel;
+        }
 
 #education{
     grid-area: education;
