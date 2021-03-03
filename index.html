@@ -4,23 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="image/png/logo AOD.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Open+Sans&display=swap" rel="style_index.css">
     <link rel="stylesheet" href="style_index.css">
     <link rel="stylesheet" href="style.css">
-    <title>Alpha DIALLO - Front End Developer</title>
+    <title>Home - Alpha DIALLO</title>
 </head>
-<body>
+<body id="page_1">
     <header>
-        <div id="logo">
-            <figure>
-                <img src="image/png/logo AOD.png" alt="logo Alpha DIALLO">
-            </figure>
+    <div id="hbloc1">
+        <div id="portrait">
+            <img src="image/jpeg/alpha.jpg" alt="photo alpha diallo">
         </div>
+        <div id="softskills">
+            <div id="communication" class="sk_icon"> <img src="image/png/soft_skills/communication.png" alt="Communication"></div>
+            <div id="problem_solving" class="sk_icon"><img src="image/png/soft_skills/Problem_Solving.png" alt="Problem_Solving"></div>
+            <div id="agile" class="sk_icon"><img src="image/png/soft_skills/agile.png" alt="agile"></div>
+            <div id="teamwork" class="sk_icon"><img src="image/png/soft_skills/teamwork.png" alt="teamwork"></div>
+            <div id="work_ethic" class="sk_icon"><img src="image/png/soft_skills/work_ethic.png" alt="work_ethic"></div>
+        </div>
+    </div>
+    <div id="hbloc2">
+        <h1 id="titre_page1">Hi, I am Alpha Diallo</h1>
         <div id="short_description">
-            <h1>Hi, I am Alpha Diallo</h1>
             <p>I am in the process of becoming a front end developer by March 2022. In order to achieve my goal, I will be attending a one-year course with Openclassroom. <br>
             I have an MSc in hospitality with tourism management from the University of Birmingham, in the United Kingdom. After ten years in the industry, I decided to operate a career change. I enjoyed what I did in these past years. However, I feel that this new path is more in line with who I am and what I enjoy doing. <br>
             Also, I am father of two boys and an unconditional fan of the Paris Saint Germain.</p>
         </div>
+        <div id="contact_button">
+            <button type="button">Contact me</button>
+        </div>
+    </div>
     </header>
     <nav>
         <ul>
@@ -31,51 +46,39 @@
             <li class="nav_button"><a href="#work_experience">Work experience</a></li>
             <li class="nav_button"><a href="blog">Blog</a></li>
         </ul>
+        <div id="logo">
+            <figure>
+                <img src="image/png/logo_aod_crop.png" alt="logo Alpha DIALLO">
+            </figure>
+        </div>
     </nav>
-    <div id="empty"></div>
     <main>
-        <section id="portoflio">
-
-        </section>
         <section id="skills">
-            <div id="hardskills">
-                <h2 id="hs_title">Hard Skills</h2>
-                <div id="html5" class="pl_icon"><img src="image/svg/programming_language/html-5.svg" alt="logo html5"></div>
+                <div id="html5" class="pl_icon">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="image/svg/programming_language/html-5.svg" alt="logo html5" style="width:300px;height:300px;">
+                          </div>
+                          <div class="flip-card-back">
+                            <h1>HTML5</h1>
+                            <p>Architect & Engineer</p>
+                            <p>We love that guy</p>
+                          </div>
+                        </div>
+                      </div>
+                </div>
                 <div id="css3" class="pl_icon"><img src="image/svg/programming_language/css3.svg" alt="logo css3"></div>
-                <div id="bootstrap" class="pl_icon"><img src="image/svg/programming_language/bootstrap.svg" alt="logo bootstrap"></div>
-                <div id="scss" class="pl_icon"><img src="image/svg/programming_language/Sass.svg" alt="logo sass"></div>
                 <div id="js" class="pl_icon"><img src="image/svg/programming_language/javascript.svg" alt="logo javascript"></div>
-                <div id="react" class="pl_icon"><img src="image/svg/programming_language/React.js.svg" alt="logo reactjs"></div>
-                <div id="react_n" class="pl_icon"><img src="image/jpeg/programing language/react native.jpg" alt="logo react native"></div>
-                <div id="node" class="pl_icon"><img src="image/svg/programming_language/node-js.svg" alt="logo nodejs"></div>
-                <div id="express" class="pl_icon"><img src="image/svg/programming_language/express.svg" alt="logo expressjs"></div>
                 <div id="python" class="pl_icon"><img src="image/svg/programming_language/Python.svg" alt="logo python"></div>
-                <div id="django" class="pl_icon"><img src="image/svg/programming_language/django.svg" alt="logo django"></div>
-                <div id="flask" class="pl_icon"><img src="image/svg/programming_language/flask.svg" alt="logo flask"></div>
-                <div id="sql" class="pl_icon"><img src="image/svg/programming_language/sql.svg" alt="logo sql"></div>
-                <div id="mongodb" class="pl_icon"><img src="image/svg/programming_language/mongodb.svg" alt=""></div>
-            </div>
-            <div id="softskills">
-                <h2 id="sk_title" class="sk_icon">Soft Skills</h2>
-                <div id="communication" class="sk_icon"> <img src="image/png/soft_skills/communication.png" alt="Communication"></div>
-                <div id="problem_solving" class="sk_icon"><img src="image/png/soft_skills/Problem_Solving.png" alt="Problem_Solving"></div>
-                <div id="agile" class="sk_icon"><img src="image/png/soft_skills/agile.png" alt="agile"></div>
-                <div id="teamwork" class="sk_icon"><img src="image/png/soft_skills/teamwork.png" alt="teamwork"></div>
-                <div id="work_ethic" class="sk_icon"><img src="image/png/soft_skills/work_ethic.png" alt="work_ethic"></div>
-            </div>
-
-        </section>
-        <section id="education">
-            <h2>Education</h2>
-
-        </section>
-        <section id="work_experience">
-            <h2>Work Experience</h2>
-
+                <div id="database" class="pl_icon"><img src="image/svg/programming_language/database.svg" alt="database_icon"></div>
         </section>
     </main>
     <footer>
-        <p>Alpha DIALLO. Copyright &copy; 2021. All rights reserved</p>
+        <div id="twitter"><a href="https://twitter.com/Alpha08647273"><img src="image/png/social_network/twitter-logo-01282021/Twitter logo/SVG/Logo blue.svg" alt="Twitter logo"></a></div>
+        <div id="github"><a href="https://github.com/AlphaOmarDiallo"><img src="image/png/social_network/Octocats/Octocat/Octocat.png" alt="Github logo"></a></div>
+        <div id="linkedin"><a href="https://www.linkedin.com/in/alpha-omar-diallo/?locale=en_US"></a><img src="image/png/social_network/LinkedIn-Logos/LinkedIn-Logos/LI-In-Bug.png" alt="Linkedin Logo"></div>
+        <div id="copyright"><p>Alpha DIALLO. Copyright &copy; 2021. All rights reserved</p></div>
     </footer>
 </body>
 </html>

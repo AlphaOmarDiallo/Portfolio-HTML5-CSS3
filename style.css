@@ -1,187 +1,248 @@
-html{
-    background-color: #175676;
+#body{
+    margin: 0;
+    padding:0;
 }
 
-body{
-    display: grid;
-    grid-template-columns: 200px 20px 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: 
-        "navbar empty header"
-        "navbar empty portfolio"
-        "navbar empty skills"
-        "navbar empty education"
-        "navbar empty work"
-        "footer footer footer";
-}
-
+/*=====================================
+NAVIGATION BAR
+=======================================*/
 nav{
     grid-area: navbar;
-    background-color:rgba(255,255,255, 0.300);
+    display: grid;
+    grid-template-columns: 20% 60% 1fr);
+    grid-template-rows: 50px;
+    grid-template-areas: 
+        "logo empty menu";
+    background-color: lightgreen;
+    border: 1px black solid; 
 }
-nav ul{
-    position: fixed;
-    top:200px;
+    nav ul{
+        grid-area: menu;
+        list-style-type: none;
+    }
+    nav li{
+        float: right;
+    }
+    nav a{
+        padding: 8px;
+    }
+  
+#logo{
+    grid-area: logo;
+    display:flex;
+    justify-content:left;
+    align-items: center;
 }
-#empty{
-    grid-area: empty;
-    background-color: transparent;
+#logo img{
+    width: 200px;
 }
-/*header section*/
+
+/*=============================
+Page 1
+==============================*/
+#page_1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "navbar navbar"
+        "header header"
+        "skills skills"
+        "footer footer";
+    background-color: white;
+}
 header{
     grid-area: header;
     background-color: white;
-    display: flex;
-    flex-flow: row nowrap;
-}
-    #logo{
-        display:flex;
-        justify-content:center;
-        align-items: center;
-        background-color: white;
-    }
-    #logo img{
-        width: 300px;
-    }
-    #short_description{
-        display: flex;
-        flex-flow: column wrap;
-        justify-content:center;
-        align-items: center;
-        background-color:#21A179;
-    }
-/*portfolio section*/
-#portfolio{
-    grid-area: portfolio;
-    background-color: pink;
     display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-areas: 
+        "hbloc1 hbloc2";
+        background-color: limegreen;
 }
-/*skills*/
+#hbloc1{
+    grid-area: hbloc1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80% 20%;
+    grid-template-areas: 
+        "photo"
+        "softskills";
+}
+#portrait{
+    grid-area: photo;
+}
+#portrait img{
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: 10px 10px 5px #21a1788c;
+}
+#softskills{
+    grid-area: softskills;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: 
+        "soft1 soft2 soft3 soft4 soft5";
+}
+#softskills img{
+    width: 30px;
+    height: auto;
+}
+#communication{
+    grid-area: soft1;
+}
+#problem_solving{
+    grid-area: soft2;
+}
+#agile{
+    grid-area: soft3;
+}
+#teamwork{
+    grid-area: soft4;
+}
+#work_ethic{
+    grid-area: soft5;
+}
+/*------------------------------------------------hbloc2------------------------------------------------------*/
+#hbloc2{
+    grid-area: hbloc2;
+    display: grid;
+    grid-template-rows: 20% 1fr 20%;
+    grid-template-areas: 
+        "title"
+        "short_description"
+        "contact_me";
+}
+#titre_page1{
+    grid-area: title;
+    text-align: center;
+}
+#short_description{
+    grid-area: short_description;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content:center;
+    align-items: center;
+    padding: 5px;
+    }
+#contact_button{
+    grid-area: contact_me;
+}
+/*-------------------------------------------------------------skills-----------------------------------------*/
 #skills{
     grid-area: skills;
-    background-color: yellow;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
     grid-template-areas: 
-        "hardskills softskills";
+        "html5 ccs3 js python database";
 }
-    #hardskills{
-        grid-area: hardskills;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(7, 1fr);
-        grid-template-areas:
-            "title title title"
-            "html5 . ."
-            "css3 bootstrap scss"
-            "js react react_native"
-            "nodejs expressJs ."
-            "python django flask"
-            "sql mongoDB .";
-    }
-    #hardskills img{
-        width: 100px;
-    }
-        #hs_title{
-            grid-area: title;
-        }
-        #html5{
-            grid-area: html5;
-        }
-        #css3{
-            grid-area: css3;
-        }
-            #css3 img{
-                width: 40px;
-            }
-        #bootstrap{
-            grid-area: bootstrap;
-        }
-        #scss{
-            grid-area: scss;
-        }
-        #js{
-            grid-area: js;
-        }
-        #react{
-            grid-area: react;
-        }
-        #react_n{
-            grid-area: react_native;
-        }
-            #react_n img{
-                width: 80px;
-            }
-        #node{
-            grid-area: nodejs;
-        }
-        #express{
-            grid-area: expressJs;
-        }
-        #python{
-            grid-area: python;
-        }
-        #django{
-            grid-area: django;
-        }
-        #flask{
-            grid-area: flask;
-        }
-        #sql{
-            grid-area: sql;
-        }
-            #sql img{
-                width: 40px;
-            }
-        #mongodb{
-            grid-area: mongoDB;
-        }
-    .pl_icon, .sk_icon{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    #softskills{
-        grid-area: softskills;
-        display: grid;
-        grid-template-columns: 40% 1fr;
-        grid-template-rows: repeat(6, 1fr);
-        grid-template-areas: 
-            "title title"
-            "com_l com_b"
-            "psl psb"
-            "agilel agileb"
-            "twl twb"
-            "wel web";
-    }
-    #softskills img{
-        width: 70px;
-    }
-        #sk_title{
-            grid-area: title;
-        }
-        #communication{
-            grid-area: com_l;
-        }
-        #problem_solving{
-            grid-area: psl;
-        }
-        #agile{
-            grid-area: agilel;
-        }
-        #teamwork{
-            grid-area:twl;
-        }
-        #work_ethic{
-            grid-area: wel;
-        }
-
-#education{
-    grid-area: education;
-    background-color: green;
+#skills img{
+    width: 50px;
+    height: auto;
 }
+#html5{
+    grid-area: html5;
+    background-color: blue;
+}
+#css3{
+    grid-area: css3;
+}
+#js{
+    grid-area:js;
+}
+#python{
+    grid-area: python;
+}
+#database{
+    grid-area: database;
+}
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+  }
+/*====================================
+FOOTER
+=====================================*/
 
-#work_experience{
-    grid-area: work;
-    background-color: red;
+footer{
+    padding: 0;
+    margin: 0;
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 40% 40% 1fr;
+    grid-template-areas: 
+        "Linkedin Github Twitter"
+        "Linkedin Github Twitter"
+        "Copyright Copyright Copyright";
+    background-color: #21A179;
+}
+footer img{
+    width: 50px;
+    height: auto;
+}
+#linkedin{
+    grid-area: Linkedin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#twitter{
+    grid-area: Twitter;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#github{
+    grid-area: Github;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#copyright{
+    grid-area: Copyright;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
